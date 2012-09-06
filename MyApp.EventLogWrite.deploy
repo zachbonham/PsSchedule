@@ -1,0 +1,9 @@
+<deploy>
+	<job name="MyApp.EventLogWrite" validContexts="Development | QA | Production">
+        <action>MyApp.EventLogWrite.ps1</action>
+        <schedule>/SC MINUTE /MO 30</schedule>
+        <arguments>-message ''hello world''</arguments>
+        <arguments context="QA">-message ''hello world from QA''</arguments>
+        <arguments context="Production">-message ''hello world from Production'</arguments>
+	</job>
+</deploy>

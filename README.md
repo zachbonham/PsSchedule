@@ -31,17 +31,17 @@ the form of [job_name].deploy.
 
 The deployment metadata schema looks like:
 
-` > <deploy>
->	<job name="MyApp.EventLogWriter" validContexts="Development | QA |Production">
->		<arguments context="Development | QA">my non production arguments</arguments>
->		<arguments context="Production">production arguments</arguments>
->		<arguments>default</arguments>
->		<schedule>/SC MINUTE /MO 5</schedule>
->		<identity context="Development | QA" username="nonprod_user" password="m2aoRCVVLtWOs9uEN3wTqA=="/>
->		<identity context="Production" username="production_user" password="omibYywROvSgRqBgFn5+KQ=="/>
->    <enabled> true | false </enabled>
->	</job>
-> </deploy>`
+	<deploy>
+		<job name="MyApp.EventLogWriter" validContexts="Development | QA |Production">
+			<arguments context="Development | QA">my non production arguments</arguments>
+				<arguments context="Production">production arguments</arguments>
+				<arguments>default</arguments>
+				<schedule>/SC MINUTE /MO 5</schedule>
+				<identity context="Development | QA" username="nonprod_user" password="m2aoRCVVLtWOs9uEN3wTqA=="/>
+				<identity context="Production" username="production_user" password="omibYywROvSgRqBgFn5+KQ=="/>
+		    <enabled> true | false </enabled>
+		</job>
+	</deploy>
 
 
 <deploy>

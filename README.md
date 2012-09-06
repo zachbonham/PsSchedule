@@ -111,6 +111,7 @@ The default identity can be set in the .\deploy.ps1 script.
 If you need a custom account, then you can configure it here.
 
 **attributes:**
+
 	@username - the username to run the process under.
 	@password - the password to use for the username.  The
 		assumption is that the @password value will be hashed.  

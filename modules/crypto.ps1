@@ -7,7 +7,7 @@ $reference_assemblies = (
 
 $source = @"
 
-namespace MaryKay.Crypto
+namespace AdminLib.Crypto
 {
 using System;
 using System.Collections.Generic;
@@ -130,9 +130,9 @@ function encrypt-string([string] $input_string)
 #>
 
 
-	$crypto = new-object marykay.crypto.encryption
+	$crypto = new-object adminlib.crypto.encryption
 	$crypto.Encrypt($input_string)
-	
+  
 }
 
 
@@ -160,7 +160,7 @@ function decrypt-string([string] $input_string)
   Returns the string "testlab!01"
   
 #>
-	$crypto = new-object marykay.crypto.encryption
+	$crypto = new-object adminlib.crypto.encryption
 	
 	$crypto.Decrypt($input_string)
 }
